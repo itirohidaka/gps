@@ -1,0 +1,53 @@
+=> Booting WEBrick
+=> Rails 4.2.3 application starting in development on http://0.0.0.0:80
+=> Run `rails server -h` for more startup options
+=> Ctrl-C to shutdown server
+[2015-08-08 19:21:49] INFO  WEBrick 1.3.1
+[2015-08-08 19:21:49] INFO  ruby 2.2.1 (2015-02-26) [x86_64-linux]
+[2015-08-08 19:21:49] INFO  WEBrick::HTTPServer#start: pid=12359 port=80
+
+
+Started GET "/coordinates" for 189.69.20.204 at 2015-08-08 19:22:09 -0500
+Cannot render console from 189.69.20.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CoordinatesController#index as HTML
+  [1m[35mCoordinate Load (0.1ms)[0m  SELECT  `coordinates`.* FROM `coordinates`  ORDER BY `coordinates`.`id` DESC LIMIT 1
+  Rendered coordinates/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 356ms (Views: 337.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 189.69.20.204 at 2015-08-08 19:22:11 -0500
+Cannot render console from 189.69.20.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  [1m[36mCoordinate Load (0.2ms)[0m  [1mSELECT  `coordinates`.* FROM `coordinates`  ORDER BY `coordinates`.`id` DESC LIMIT 1[0m
+  Rendered coordinates/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 166ms (Views: 163.4ms | ActiveRecord: 0.2ms)
+[2015-08-08 19:31:16] FATAL SignalException: SIGTERM
+	/usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:174:in `select'
+	/usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:174:in `block in start'
+	/usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:32:in `start'
+	/usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:162:in `start'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/rack-1.6.4/lib/rack/handler/webrick.rb:34:in `run'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.3/lib/rails/commands/server.rb:80:in `start'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.3/lib/rails/commands/commands_tasks.rb:80:in `block in server'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.3/lib/rails/commands/commands_tasks.rb:75:in `tap'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.3/lib/rails/commands/commands_tasks.rb:75:in `server'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.3/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.3/lib/rails/commands.rb:17:in `<top (required)>'
+	/root/Gps3/bin/rails:8:in `require'
+	/root/Gps3/bin/rails:8:in `<top (required)>'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/spring-1.3.6/lib/spring/client/rails.rb:28:in `load'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/spring-1.3.6/lib/spring/client/rails.rb:28:in `call'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/spring-1.3.6/lib/spring/client/command.rb:7:in `call'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/spring-1.3.6/lib/spring/client.rb:26:in `run'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/spring-1.3.6/bin/spring:48:in `<top (required)>'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/spring-1.3.6/lib/spring/binstub.rb:11:in `load'
+	/usr/local/rvm/gems/ruby-2.2.1/gems/spring-1.3.6/lib/spring/binstub.rb:11:in `<top (required)>'
+	/root/Gps3/bin/spring:13:in `require'
+	/root/Gps3/bin/spring:13:in `<top (required)>'
+	bin/rails:3:in `load'
+	bin/rails:3:in `<main>'
+[2015-08-08 19:31:16] INFO  going to shutdown ...
+[2015-08-08 19:31:16] INFO  WEBrick::HTTPServer#start done.
+Exiting
