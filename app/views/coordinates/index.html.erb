@@ -25,10 +25,6 @@ Fix Date/Time: <%= @gps_last.fix_datetime %><br>
   <div id="map" style='width: 1024px; height: 400px;'></div>
 </div>
 
-<% @gps_all.each do |p| %>
-<li><%= p.latitude %>,<%= p.longitude %></li>
-<% end %>
-
 <script type="text/javascript">
 handler = Gmaps.build('Google');
 handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
