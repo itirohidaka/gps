@@ -2,12 +2,24 @@
 <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
 
 <br>
-Latitude: <%= @gps_last.latitude %><br>
-Longitude: <%= @gps_last.longitude %><br>
-Fix Date/Time: <%= @gps_last.fix_datetime %><br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <b> Ultima captura: </b><br>
+      <b> Latitude: </b><%= @gps_last.latitude %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b> Longitude: </b><%= @gps_last.longitude %> <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Fix Date/Time:</b> <%= @gps_last.fix_datetime %> UTC<br><br>
+    </div>
+  </div>
+</div>
 
-<div style='width: 800px;'>
-  <div id="map" style='width: 1080px; height: 500px;'></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div style="width: 100%">
+        <div id="map" style="width: 100%; height: 500px">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script type="text/javascript">
